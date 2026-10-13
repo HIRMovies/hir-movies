@@ -1,0 +1,291 @@
+
+/* =========================
+   HIR MOVIES - MAIN STYLE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101010;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+/* Header */
+
+header {
+    background-color: #080808;
+    padding: 25px 7%;
+    border-bottom: 2px solid #e50914;
+}
+
+header h1 {
+    color: #e50914;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #cccccc;
+    margin-bottom: 18px;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+/* Main Sections */
+
+main {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 55px 0;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 22px;
+    border-left: 4px solid #e50914;
+    padding-left: 12px;
+}
+
+section p {
+    color: #d0d0d0;
+    margin-bottom: 15px;
+}
+
+/* Home Section */
+
+#home {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#home h2 {
+    font-size: 38px;
+    border-left: none;
+    padding-left: 0;
+}
+
+#home a,
+article a {
+    display: inline-block;
+    background-color: #e50914;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#home a:hover,
+article a:hover {
+    background-color: #b20710;
+}
+
+/* Featured Movie */
+
+#featured article {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+}
+
+#featured img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+/* Movies */
+
+#movies {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#movies h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+#movies article {
+    background-color: #1b1b1b;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-wrap: anywhere;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#movies article:hover {
+    transform: translateY(-5px);
+    border-color: #e50914;
+}
+
+#movies article img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+#movies article h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#movies article p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Categories */
+
+#categories ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+#categories li {
+    background-color: #1b1b1b;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 15px;
+    transition: border-color 0.3s;
+}
+
+#categories li:hover {
+    border-color: #e50914;
+}
+
+/* About and Contact */
+
+#about,
+#contact {
+    border-top: 1px solid #333333;
+}
+
+#contact a {
+    color: #ff4b55;
+}
+
+/* Footer */
+
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 2px solid #e50914;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+    main {
+        width: 90%;
+    }
+
+    #movies {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #home h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    #home h2 {
+        font-size: 27px;
+    }
+
+    #movies {
+        grid-template-columns: 1fr;
+    }
+
+    #movies article img {
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+    }
+
+    #categories ul {
+        grid-template-columns: 1fr;
+    }
+}
